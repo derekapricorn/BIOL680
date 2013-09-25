@@ -1,0 +1,20 @@
+
+f_hdl =  figure('KeyPressFcn',@shift_limits);
+    xlimits = get(gca, 'XLim');
+    xlimits = xlimits .* 1.5;
+    
+    
+    function shift_limits(event)
+         xlimits = get(gca, 'XLim');
+    % Callback to parse keypress event data to print a figure
+        if event.Key == 'rightArrow'
+                xlimits = xlimits .* 1.5;
+                set(gca, 'XLim', xlimits);
+                % plot the graph with axis limits shifted to the right
+                plot ();
+        else if event.Key = 'leftArrow'
+                % plot the graph with axis limits shifted to the left
+                plot ();
+            end
+        end
+    end
