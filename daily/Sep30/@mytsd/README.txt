@@ -1,0 +1,1 @@
+The script demonstrating the functionality is already included in the MyLoadCSC.m
